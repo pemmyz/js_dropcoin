@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DropCoin Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>DropCoin</h1>
+    <div id="game-container">
+        <canvas id="gameCanvas"></canvas>
+        <div id="game-over-screen" class="hidden">
+            <h2>GAME OVER</h2>
+            <p>Final Score: <span id="final-score">0</span></p>
+            <button id="restart-button">Play Again</button>
+        </div>
+    </div>
+    <div id="ui">
+        <p>Score: <span id="score-display">0</span></p>
+        <p>Coins: <span id="coins-display">10</span></p>
+    </div>
+    <p class="instructions">Move mouse/finger to aim, click/tap to drop!</p>
+
+    <script src="script.js"></script>
+</body>
+</html>

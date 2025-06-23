@@ -1,0 +1,91 @@
+body {
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    height: 100vh;
+    text-align: center;
+}
+
+h1 {
+    color: #ffff00;
+    text-shadow: 2px 2px 4px #ff0000;
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+#game-container {
+    position: relative; /* Needed for positioning the game over screen */
+    border: 5px solid #cccccc;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    background-color: #000033;
+}
+
+canvas {
+    display: block; /* Removes any default bottom margin */
+    cursor: pointer;
+}
+
+#ui {
+    display: flex;
+    justify-content: space-around;
+    width: 400px;
+    margin-top: 15px;
+    font-size: 1.5em;
+}
+
+.instructions {
+    margin-top: 10px;
+    color: #aaaaaa;
+    font-size: 1em;
+}
+
+/* Game Over Screen Styling */
+#game-over-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+#game-over-screen h2 {
+    font-size: 4em;
+    color: #ff4444;
+    margin: 0;
+}
+
+#game-over-screen p {
+    font-size: 2em;
+}
+
+#restart-button {
+    padding: 15px 30px;
+    font-size: 1.5em;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #ffff00;
+    color: #000;
+    border: 2px solid #fff;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#restart-button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.hidden {
+    display: none !important;
+}
