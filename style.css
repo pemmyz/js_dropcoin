@@ -5,9 +5,15 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    /* 
+      FIX: Changed 'height' to 'min-height'.
+      'height: 100vh' forces the body to the screen size, causing overflow.
+      'min-height: 100vh' allows the body to grow if content is taller, enabling scrolling.
+    */
+    min-height: 100vh;
     margin: 0;
-    height: 100vh;
+    padding: 20px 0; /* Add padding to prevent content from touching screen edges */
+    box-sizing: border-box; /* Ensures padding is included in height calculation */
     text-align: center;
 }
 
@@ -19,23 +25,47 @@ h1 {
 }
 
 #game-container {
-    position: relative; /* Needed for positioning the game over screen */
+    position: relative;
     border: 5px solid #cccccc;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
     background-color: #000033;
+    min-width: 400px;
+    min-height: 600px;
 }
 
 canvas {
-    display: block; /* Removes any default bottom margin */
+    display: block;
     cursor: pointer;
+    transition: width 0.3s ease, height 0.3s ease;
 }
 
 #ui {
     display: flex;
     justify-content: space-around;
-    width: 400px;
+    width: 600px; /* Default to modern width */
     margin-top: 15px;
     font-size: 1.5em;
+    transition: width 0.3s ease;
+}
+
+#game-controls {
+    margin-top: 15px;
+}
+
+#style-toggle-button {
+    padding: 10px 20px;
+    font-size: 1em;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #44aaff;
+    color: #fff;
+    border: 2px solid #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#style-toggle-button:hover {
+    background-color: #fff;
+    color: #000;
 }
 
 .instructions {
@@ -44,7 +74,6 @@ canvas {
     font-size: 1em;
 }
 
-/* Game Over Screen Styling */
 #game-over-screen {
     position: absolute;
     top: 0;
