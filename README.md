@@ -11,9 +11,10 @@ A fun and stylish physics-based coin drop game inspired by Payazzo/Pajatso machi
 > 🎯 Drop your way to the highest score before you run out of coins!
 
 
-## 📸 Screenshot
+## 📸 Screenshots
 
-![DropCoin Gameplay Screenshot](screenshot.png)
+### Game
+![Game 1](screenshots/game_1.png)  
 
 ## 🧩 Features
 
